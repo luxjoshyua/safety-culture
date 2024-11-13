@@ -7,6 +7,7 @@
   --text: #293745;
   --grey: #f3f6fb;
   --grey-two: #d0d7e1;
+  --grey-three: #bfc6d4;
   --purple: #f0f0ff;
   --purple-two: #f3f6fb;
   --white: #ffffff;
@@ -28,7 +29,6 @@ body {
 
 body {
   color: var(--text);
-  background: var(--background);
   font-family: "Noto Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
   line-height: 1.6;

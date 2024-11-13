@@ -1,0 +1,54 @@
+.languageDropdown {
+  position: relative;
+  width: 210px;
+  height: 50px;
+  .dropdownButton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background-color: unset;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .icon {
+    margin: 0 0.5rem;
+  }
+
+  .dropdownMenu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    border: 0.0625rem solid var(--grey-two);
+    border-radius: 0.75rem;
+    padding: 0.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+  }
+
+  .dropdownItem {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    list-style: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+
+    &:hover {
+      background-color: var(--grey-three);
+    }
+  }
+}

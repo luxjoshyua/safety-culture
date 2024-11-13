@@ -1,0 +1,8 @@
+.blockHeader {
+  background-color: var(--purple);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 0.0625rem solid var(--grey-two);
+  padding: 1.25rem 0;
+}

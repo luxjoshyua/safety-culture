@@ -3,7 +3,7 @@ import { useState, useRef } from "react"
 import { FaGlobe, FaChevronDown } from "react-icons/fa"
 import styles from "./LanguageDropdown.module.scss"
 
-const languages = ["English (US)", "Spanish (SP)", "Italian (IT)", "French (FR)"]
+const languages = ["English (US)", "Deutsch", "Español", "Français", "Nederlands", "Português"]
 
 const LanguageDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)

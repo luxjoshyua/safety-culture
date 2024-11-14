@@ -1,10 +1,10 @@
 .blockHeader {
-  background-color: var(--purple);
+  background-color: var(--cream);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 0.0625rem solid var(--grey-two);
-  padding: 1.5rem 0;
+  border-bottom: var(--border-width) solid var(--grey-two);
+  padding: 1.5rem 0.5rem;
   .blockInner {
     display: flex;
     justify-content: space-between;
@@ -20,6 +20,7 @@
         padding: 1.3rem 1rem;
         border-radius: 0.3rem;
         border: 1px solid var(--grey-three);
+        color: var(--text);
 
         &::placeholder {
           font-weight: 700;
@@ -34,6 +35,17 @@
         right: 1rem;
         transform: translateY(-50%);
         color: var(--grey-one);
+      }
+    }
+    .blockButtons {
+      display: flex;
+      align-items: center;
+      .blockButtonsInner {
+        display: flex;
+        align-items: center;
+        li {
+          margin-right: 0.5rem;
+        }
       }
     }
   }

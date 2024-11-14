@@ -1,0 +1,24 @@
+.blockOuter {
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--link);
+  padding: 1.7rem 1.6rem;
+  width: 100%;
+  max-width: var(--container-width-inner);
+  margin-bottom: 4rem;
+  .blockInner {
+    max-width: 835px;
+    .blockHeading {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .blockButtons {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      li:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.blockOuter {
+  border-top: 1px solid var(--grey-six);
+  padding: 4rem 0;
+  .blockInner {
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--grey-five);
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 1rem 0.5rem;
+    .blockLinks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .blockLink {
+        margin: 0 0.5rem;
+
+        .blockLinkImage {
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.blockOuter {
+  border-radius: var(--border-radius);
+  background-color: var(--grey-four);
+  padding: 1.7rem 1.6rem;
+  width: 100%;
+  max-width: var(--container-width-small);
+  margin-bottom: 6rem;
+  .blockInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .blockText {
+      font-size: 1.25rem;
+    }
+    .blockIcon {
+      transform: translateX(-1);
+    }
+  }
+}

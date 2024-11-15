@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .blockOuter {
   border-radius: var(--border-radius);
   border: var(--border-width) solid var(--link);
@@ -5,6 +7,10 @@
   width: 100%;
   max-width: var(--container-width-inner);
   margin-bottom: 4rem;
+  @media (max-width: $tabletScreens) {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
   .blockInner {
     max-width: 835px;
     .blockHeading {
@@ -16,8 +22,21 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      li:not(:last-of-type) {
-        margin-right: 1rem;
+      @media (max-width: $tabletScreens) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      li {
+        @media (max-width: $tabletScreens) {
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+        &:not(:last-of-type) {
+          margin-right: 1rem;
+          @media (max-width: $tabletScreens) {
+            margin-right: 0;
+          }
+        }
       }
     }
   }

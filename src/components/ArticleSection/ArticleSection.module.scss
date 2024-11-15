@@ -1,8 +1,17 @@
+@import "../../styles/variables.scss";
+
 .blockOuter {
   margin-bottom: 4rem;
+  @media (max-width: $tabletScreens) {
+    margin-bottom: 2rem;
+  }
   .blockSecondaryHeading {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    @media (max-width: $tabletScreens) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
   }
 
   .OuterListItem {
@@ -20,6 +29,9 @@
     .blockHeading {
       font-size: 2rem;
       margin-bottom: 1rem;
+      @media (max-width: $tabletScreens) {
+        font-size: 1.5rem;
+      }
     }
     .blockInner {
       display: flex;

@@ -1,27 +1,52 @@
+@import "../../styles/variables.scss";
+
 .blockHeader {
-  background-color: var(--cream);
-  position: sticky;
+  background-color: var(--grey);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
   top: 0;
   z-index: 100;
   border-bottom: var(--border-width) solid var(--grey-two);
-  padding: 1.5rem 0.5rem;
   margin-bottom: 0.5rem;
+  @media (max-width: $tabletScreens) {
+    padding: 1rem;
+  }
   .blockInner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     max-width: var(--container-width);
     margin: 0 auto;
+    a {
+      display: flex;
+      align-items: center;
+      .logo {
+        @media (max-width: $tabletScreens) {
+          max-width: 150px;
+        }
+      }
+    }
+
     .blockSearch {
+      display: flex;
+      align-items: center;
       position: relative;
-      margin: 0 1rem;
       .searchInput {
         width: 500px;
+        height: 50px;
         background-color: var(--white);
-        padding: 1.3rem 1rem;
-        border-radius: 0.3rem;
+        padding: 0 1rem;
         border: 1px solid var(--grey-three);
-        color: var(--text);
+        border-radius: 0.3rem;
+        box-sizing: border-box;
+        font-size: 1rem;
+
+        &:focus {
+          outline: none;
+          border-color: var(--link);
+          box-shadow: 0 0 0 2px rgba(101, 89, 255, 0.2);
+        }
 
         &::placeholder {
           font-weight: 700;
@@ -30,23 +55,142 @@
           opacity: 0.9;
         }
       }
+
       .searchIcon {
         position: absolute;
-        top: 50%;
         right: 1rem;
+        color: var(--grey-two);
+        pointer-events: none;
+        top: 50%;
         transform: translateY(-50%);
-        color: var(--grey-one);
       }
     }
+
     .blockButtons {
       display: flex;
       align-items: center;
       .blockButtonsInner {
         display: flex;
-        align-items: center;
+        list-style: none;
+        margin-left: 1rem;
         li {
-          margin-right: 0.5rem;
+          margin-left: 1rem;
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
         }
+      }
+
+      .languageDropdown {
+        margin-right: 1rem;
+      }
+    }
+
+    .mobileIcons {
+      display: flex;
+      align-items: center;
+
+      &.active {
+        .mobileSearchIcon {
+          display: block;
+        }
+      }
+
+      .mobileSearchIcon {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--link);
+        margin-right: 0.5rem;
+        background-color: var(--white);
+        padding: 0 0.5rem;
+      }
+
+      .mobileMenuIcon {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--link);
+      }
+    }
+  }
+
+  .mobileMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--grey);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 1rem 2rem;
+    height: 100vh;
+    border-top: 0.5px solid var(--grey-two);
+
+    .mobileMenuList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 1rem;
+        border-bottom: 0.5px solid var(--grey-two);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: var(--foreground);
+          font-weight: 700;
+          transition: color 0.3s;
+          padding-bottom: 0.5rem;
+          display: block;
+          &:hover {
+            color: var(--link);
+          }
+        }
+      }
+    }
+    .languageDropdown {
+      margin-top: 1rem;
+    }
+  }
+
+  @media (min-width: $desktopScreens) {
+    .blockInner {
+      .mobileIcons {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: $tabletScreens) {
+    .blockInner {
+      .blockSearch,
+      .blockButtons {
+        display: none;
+      }
+
+      .mobileIcons {
+        display: flex;
+      }
+    }
+  }
+
+  @media (max-width: $superSmallMobileScreens) {
+    .mobileMenu {
+      padding: 1rem;
+
+      .mobileSearchIcon {
+        right: 1rem;
+      }
+    }
+
+    .blockSearch {
+      .searchInput {
+        width: 100%;
       }
     }
   }

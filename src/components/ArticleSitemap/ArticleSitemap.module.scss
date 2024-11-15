@@ -1,12 +1,21 @@
+@import "../../styles/variables.scss";
+
 .blockOuter {
   max-width: var(--container-width);
   margin: 0 auto;
   .blockInner {
     max-width: 610px;
     display: flex;
+    @media (max-width: $tabletScreens) {
+      justify-content: center;
+      padding: 0 0.25rem;
+    }
     .link {
       font-size: 0.75rem;
       color: var(--grey-seven);
+      @media (max-width: $mobileScreens) {
+        font-size: 0.4rem;
+      }
       &:after {
         content: "/";
         margin: 0 0.25rem;

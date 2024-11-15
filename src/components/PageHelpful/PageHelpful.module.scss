@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .blockOuter {
   border-radius: var(--border-radius);
   background-color: var(--grey-four);
@@ -5,12 +7,19 @@
   width: 100%;
   max-width: var(--container-width-small);
   margin-bottom: 6rem;
+  @media (max-width: $tabletScreens) {
+    padding: 1rem;
+    margin-bottom: 0;
+  }
   .blockInner {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     .blockText {
       font-size: 1.25rem;
+      @media (max-width: $tabletScreens) {
+        font-size: initial;
+      }
     }
     .blockIcon {
       transform: translateX(-1);

@@ -1,6 +1,11 @@
+@import "../../styles/variables.scss";
+
 .blockOuter {
   border-top: 1px solid var(--grey-six);
   padding: 4rem 0;
+  @media (max-width: $tabletScreens) {
+    padding: 2rem 0;
+  }
   .blockInner {
     border-radius: var(--border-radius);
     border: var(--border-width) solid var(--grey-five);
@@ -13,8 +18,10 @@
       align-items: center;
       .blockLink {
         margin: 0 0.5rem;
-
         .blockLinkImage {
+          @media (max-width: $tabletScreens) {
+            max-width: 100px;
+          }
         }
       }
     }

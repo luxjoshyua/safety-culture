@@ -19,6 +19,8 @@
   --container-width-small: 675px;
   --border-width: 0.0625rem;
   --border-radius: 0.5rem;
+  --smallScreens: 1024px;
+  --superSmallScreens: 480px;
 }
 
 html,

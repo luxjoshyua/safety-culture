@@ -1,6 +1,10 @@
+@import "../../styles/variables.scss";
+
 .blockOuter {
   margin-bottom: 4rem;
-
+  @media (max-width: $tabletScreens) {
+    margin-bottom: 2rem;
+  }
   .tabs {
     margin-bottom: 1rem;
     border-bottom: 3px solid var(--grey);
@@ -27,6 +31,9 @@
   .blockSecondaryHeading {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    @media (max-width: $tabletScreens) {
+      font-size: 1.5rem;
+    }
   }
 
   .tabContent {
@@ -45,6 +52,9 @@
         max-width: 100%;
         height: 500px;
         margin-bottom: 0.25rem;
+        @media (max-width: $tabletScreens) {
+          height: 200px;
+        }
       }
     }
   }

@@ -1,0 +1,23 @@
+.blockOuter {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  max-width: 300px;
+
+  .blockHeading {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .linksOuter {
+    margin-left: 0.75rem;
+    .link {
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      display: block;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -11,7 +11,7 @@ const Header: React.FC = () => {
   return (
     <header className={styles.blockHeader}>
       <div className={styles.blockInner}>
-        <Link href="/">
+        <Link href="https://safetyculture.com/" target="_blank">
           <Image src="/sc-logo-color.svg" alt="Safety Culture logo" width={200} height={30} />
         </Link>
         <div className={styles.blockSearch}>

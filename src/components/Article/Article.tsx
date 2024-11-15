@@ -1,9 +1,11 @@
 import styles from "./Article.module.scss"
+import ArticleNav from "../ArticleNav"
 import ArticleSection from "../ArticleSection"
 import ArticleTabs from "../ArticleTabs"
 import { BodyContent } from "../ArticleSection/ArticleSection"
 import MoreHelp from "../MoreHelp"
 import PageHelpful from "../PageHelpful"
+import ArticleSitemap from "../ArticleSitemap"
 
 interface Props {
   articleData: {
@@ -34,7 +36,6 @@ interface ContentEntry {
 
 const Article: React.FC<Props> = (props) => {
   const { title, description, content, updated } = props.articleData
-  // console.log("content", content)
 
   const dateFormatted = new Date(updated).toLocaleDateString("en-GB", {
     day: "numeric",
@@ -47,14 +48,11 @@ const Article: React.FC<Props> = (props) => {
     const articleId = entry.sys.id
     const contentType = entry.sys.contentType.sys.id
     const fields = entry.fields
-
+    // console.log(fields)
     switch (contentType) {
       // entry 0 and 2 are the same id type
       case "articleSection":
         return <ArticleSection id={articleId} fields={fields} />
-      // entry 1 - dont need yet
-      case "infoPanelRequirement":
-        return <div></div>
       // entry 3
       case "articleTabs":
         return <ArticleTabs fields={fields} />
@@ -65,7 +63,9 @@ const Article: React.FC<Props> = (props) => {
 
   return (
     <article>
+      <ArticleSitemap />
       <section className={styles.blockOuter}>
+        <ArticleNav />
         <div className={styles.blockInner}>
           <div className={styles.blockDetails}>
             <span className={styles.blockActions}>Actions</span>

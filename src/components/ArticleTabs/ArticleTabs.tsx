@@ -54,6 +54,7 @@ const parseContent = (content: Content[]): JSX.Element[] => {
                       src="/browser.jpg"
                       alt="Image of Safety Culture browser user interface"
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
                 )}

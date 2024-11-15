@@ -3,12 +3,12 @@
 .blockOuter {
   max-width: var(--container-width);
   margin: 0 auto;
+  padding: 0 2rem;
   .blockInner {
     max-width: 610px;
     display: flex;
     @media (max-width: $tabletScreens) {
       justify-content: center;
-      padding: 0 0.25rem;
     }
     .link {
       font-size: 0.75rem;

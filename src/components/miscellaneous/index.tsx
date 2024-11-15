@@ -33,7 +33,7 @@ export const Button = ({
   }
 
   return (
-    <Link href={link || "#"} className={styles.buttonMain} style={buttonStyle}>
+    <Link href={link || "#"} className={styles.buttonMain} style={buttonStyle} target="_blank">
       {icon && <span className={styles.buttonIconOuter}>{icon}</span>}
       <span className={styles.buttonText}>{text}</span>
     </Link>

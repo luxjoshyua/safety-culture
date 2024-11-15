@@ -48,7 +48,6 @@ const Article: React.FC<Props> = (props) => {
     const articleId = entry.sys.id
     const contentType = entry.sys.contentType.sys.id
     const fields = entry.fields
-    // console.log(fields)
     switch (contentType) {
       // entry 0 and 2 are the same id type
       case "articleSection":

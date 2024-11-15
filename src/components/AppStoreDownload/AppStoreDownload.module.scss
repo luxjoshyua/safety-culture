@@ -4,7 +4,7 @@
   border-top: 1px solid var(--grey-six);
   padding: 4rem 0;
   @media (max-width: $tabletScreens) {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
   .blockInner {
     border-radius: var(--border-radius);

@@ -53,6 +53,9 @@
         height: 500px;
         margin-bottom: 0.25rem;
         @media (max-width: $tabletScreens) {
+          height: 500px;
+        }
+        @media (max-width: $mobileScreens) {
           height: 200px;
         }
       }

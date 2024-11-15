@@ -82,32 +82,50 @@ const Header: React.FC = () => {
         <div className={styles.mobileMenu}>
           <ul className={styles.mobileMenuList}>
             <li>
-              <Link href="/get-started" onClick={toggleMobileMenuActive}>
+              <Link
+                href="https://safetyculture.com/"
+                onClick={toggleMobileMenuActive}
+                target="_blank">
                 Get Started
               </Link>
             </li>
             <li>
-              <Link href="/using-safetyculture" onClick={toggleMobileMenuActive}>
+              <Link
+                href="https://safetyculture.com/"
+                onClick={toggleMobileMenuActive}
+                target="_blank">
                 Using SafetyCulture
               </Link>
             </li>
             <li>
-              <Link href="/administration" onClick={toggleMobileMenuActive}>
+              <Link
+                href="https://safetyculture.com/"
+                onClick={toggleMobileMenuActive}
+                target="_blank">
                 Administration
               </Link>
             </li>
             <li>
-              <Link href="/integrations" onClick={toggleMobileMenuActive}>
+              <Link
+                href="https://safetyculture.com/"
+                onClick={toggleMobileMenuActive}
+                target="_blank">
                 Integrations
               </Link>
             </li>
             <li>
-              <Link href="/account-settings" onClick={toggleMobileMenuActive}>
+              <Link
+                href="https://safetyculture.com/"
+                onClick={toggleMobileMenuActive}
+                target="_blank">
                 Account Settings
               </Link>
             </li>
             <li>
-              <Link href="/fixing-problems" onClick={toggleMobileMenuActive}>
+              <Link
+                href="https://safetyculture.com/"
+                onClick={toggleMobileMenuActive}
+                target="_blank">
                 Fixing Problems
               </Link>
             </li>

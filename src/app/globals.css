@@ -67,4 +67,8 @@ main {
 a {
   color: var(--link);
   text-decoration: none;
+  transition: opacity 0.25s ease;
+  &:hover {
+    opacity: 0.6;
+  }
 }
